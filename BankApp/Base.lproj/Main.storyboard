@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9u3-Ux-JCY">
+                                <rect key="frame" x="47" y="349.66666666666669" width="308" height="227.00000000000006"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="df0-Gi-F4c">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-3a-74Z">
+                                        <rect key="frame" x="0.0" y="63" width="308" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCZ-DR-QIq">
+                                        <rect key="frame" x="0.0" y="126" width="308" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login">
+                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyB-G4-k7A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqG-cb-HxL">
+                                        <rect key="frame" x="0.0" y="188.99999999999994" width="308" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Register">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNq-3m-U51"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPe-my-Pse" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="30.666666666666657" y="90" width="341" height="226"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="bankAnimation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9u3-Ux-JCY" firstAttribute="top" secondItem="ZPe-my-Pse" secondAttribute="bottom" constant="33.666666666666742" id="3CV-ng-7jt"/>
+                            <constraint firstItem="9u3-Ux-JCY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.765903" id="KTU-Jb-8P4"/>
+                            <constraint firstItem="ZPe-my-Pse" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.258581" id="MGb-Gt-km3"/>
+                            <constraint firstItem="ZPe-my-Pse" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="UwB-rM-Kr5"/>
+                            <constraint firstItem="ZPe-my-Pse" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.848259" id="cTi-Nj-7Fa"/>
+                            <constraint firstItem="ZPe-my-Pse" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="chn-dL-0wC"/>
+                            <constraint firstItem="9u3-Ux-JCY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.274648" id="dWi-Ne-TXF"/>
+                            <constraint firstItem="9u3-Ux-JCY" firstAttribute="centerX" secondItem="ZPe-my-Pse" secondAttribute="centerX" id="xO1-do-bmX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dWi-Ne-TXF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jj1-vP-zuo"/>
+                    <connections>
+                        <outlet property="bankAnimation" destination="ZPe-my-Pse" id="Xgy-b1-Wxb"/>
+                        <outlet property="emailField" destination="df0-Gi-F4c" id="jeK-aF-4vW"/>
+                        <outlet property="passwordField" destination="aUg-3a-74Z" id="veq-EM-ETy"/>
+                        <outlet property="registerButton" destination="jqG-cb-HxL" id="Z6z-Hj-rLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3734.3283582089548" y="-2.7459954233409607"/>
+        </scene>
+        <!--Register Controller-->
+        <scene sceneID="FrQ-Tf-4UE">
+            <objects>
+                <viewController storyboardIdentifier="RegisterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s45-7w-nPz" customClass="RegisterController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tRB-ue-6hn">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zDT-Ye-XTL">
+                                <rect key="frame" x="47" y="389" width="308" height="235.66666666666663"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R72-WP-d76">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-SC-rWa">
+                                        <rect key="frame" x="0.0" y="50.333333333333314" width="308" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phonenumber" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmZ-vk-WTr">
+                                        <rect key="frame" x="0.0" y="100.66666666666669" width="308" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5O-Cm-Zgk">
+                                        <rect key="frame" x="0.0" y="151" width="308" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-Nu-dpn">
+                                        <rect key="frame" x="0.0" y="201.33333333333337" width="308" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Register">
+                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="s45-7w-nPz" eventType="touchUpInside" id="vHz-r1-iwp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GX5-wL-Ixk" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="30.666666666666657" y="121" width="341" height="226"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="bankAnimation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bld-BW-jlJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GX5-wL-Ixk" firstAttribute="centerX" secondItem="bld-BW-jlJ" secondAttribute="centerX" id="4AU-mg-uGL"/>
+                            <constraint firstItem="zDT-Ye-XTL" firstAttribute="top" secondItem="GX5-wL-Ixk" secondAttribute="bottom" constant="42" id="9kJ-z5-AvF"/>
+                            <constraint firstItem="zDT-Ye-XTL" firstAttribute="centerX" secondItem="GX5-wL-Ixk" secondAttribute="centerX" id="RCH-b2-NLL"/>
+                            <constraint firstItem="zDT-Ye-XTL" firstAttribute="width" secondItem="tRB-ue-6hn" secondAttribute="width" multiplier="0.766169" id="V41-8q-zJW"/>
+                            <constraint firstItem="GX5-wL-Ixk" firstAttribute="width" secondItem="tRB-ue-6hn" secondAttribute="width" multiplier="0.848259" id="XvW-Ld-AAu"/>
+                            <constraint firstItem="GX5-wL-Ixk" firstAttribute="top" secondItem="bld-BW-jlJ" secondAttribute="top" constant="59" id="Zwo-Dm-baE"/>
+                            <constraint firstItem="GX5-wL-Ixk" firstAttribute="height" secondItem="tRB-ue-6hn" secondAttribute="height" multiplier="0.258581" id="ktg-ru-PDN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bankAnimation" destination="GX5-wL-Ixk" id="EFU-LO-bbj"/>
+                        <outlet property="emailField" destination="sw7-SC-rWa" id="CO1-Hj-HfJ"/>
+                        <outlet property="fullnameField" destination="R72-WP-d76" id="keZ-uE-rcX"/>
+                        <outlet property="passwordField" destination="K5O-Cm-Zgk" id="8jm-tl-dUL"/>
+                        <outlet property="phoneField" destination="hmZ-vk-WTr" id="y3L-zI-LQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWp-PB-cNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4555.2238805970146" y="-3.432494279176201"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="KlA-eo-niv">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FFh-QS-i4b" customClass="HomeController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xxQ-Um-1t4">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-BC-Oqb">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SVk-ww-Lfo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SVk-ww-Lfo" firstAttribute="trailing" secondItem="fXT-BC-Oqb" secondAttribute="trailing" id="eJh-MC-n5Q"/>
+                            <constraint firstItem="fXT-BC-Oqb" firstAttribute="leading" secondItem="SVk-ww-Lfo" secondAttribute="leading" id="lyl-4v-sRW"/>
+                            <constraint firstItem="fXT-BC-Oqb" firstAttribute="top" secondItem="SVk-ww-Lfo" secondAttribute="top" id="qgN-Dg-Bm9"/>
+                            <constraint firstItem="SVk-ww-Lfo" firstAttribute="bottom" secondItem="fXT-BC-Oqb" secondAttribute="bottom" id="uNJ-1k-9ea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeTableView" destination="fXT-BC-Oqb" id="Ynb-Pt-DNq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjT-LM-jB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5385.0746268656712" y="-3.432494279176201"/>
+        </scene>
+        <!--Card Not Exist Controller-->
+        <scene sceneID="hPB-dy-MuS">
+            <objects>
+                <viewController storyboardIdentifier="CardNotExistController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L9M-kq-3rm" customClass="CardNotExistController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNJ-Dc-l6j">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="cuV-8q-PAb">
+                                <rect key="frame" x="38.666666666666657" y="364" width="325" height="243.66666666666663"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="card name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ke8-QH-DmR">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkk-Zy-nZx">
+                                        <rect key="frame" x="0.0" y="52.333333333333314" width="325" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="expire date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAn-9p-B09">
+                                        <rect key="frame" x="0.0" y="104.66666666666669" width="325" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cvc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-Gn-Fgu">
+                                        <rect key="frame" x="0.0" y="157" width="325" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgo-eL-wPa">
+                                        <rect key="frame" x="0.0" y="209.33333333333337" width="325" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Create">
+                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="createButtonTapped:" destination="L9M-kq-3rm" eventType="touchUpInside" id="jav-Hz-9ca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-v4-pS5" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="25.666666666666657" y="101" width="351" height="242"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="addCard"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ePh-a6-2iP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tqz-v4-pS5" firstAttribute="centerX" secondItem="ePh-a6-2iP" secondAttribute="centerX" id="4nH-5n-fF2"/>
+                            <constraint firstItem="Tqz-v4-pS5" firstAttribute="height" secondItem="MNJ-Dc-l6j" secondAttribute="height" multiplier="0.276888" id="UPL-M0-bG0"/>
+                            <constraint firstItem="Tqz-v4-pS5" firstAttribute="width" secondItem="MNJ-Dc-l6j" secondAttribute="width" multiplier="0.873134" id="WVy-Vw-9Ad"/>
+                            <constraint firstItem="cuV-8q-PAb" firstAttribute="width" secondItem="MNJ-Dc-l6j" secondAttribute="width" multiplier="0.733831" constant="30" id="beA-2j-ZhJ"/>
+                            <constraint firstItem="cuV-8q-PAb" firstAttribute="centerX" secondItem="Tqz-v4-pS5" secondAttribute="centerX" id="rdf-8e-GV2"/>
+                            <constraint firstItem="Tqz-v4-pS5" firstAttribute="top" secondItem="ePh-a6-2iP" secondAttribute="top" constant="39" id="u3d-4f-mVU"/>
+                            <constraint firstItem="cuV-8q-PAb" firstAttribute="top" secondItem="Tqz-v4-pS5" secondAttribute="bottom" constant="21" id="xGP-CR-XKE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardAnimation" destination="Tqz-v4-pS5" id="BKx-yX-GiE"/>
+                        <outlet property="cardNameField" destination="Ke8-QH-DmR" id="ckt-qV-Mix"/>
+                        <outlet property="cardNumberField" destination="Lkk-Zy-nZx" id="hN1-gH-yEl"/>
+                        <outlet property="cvcField" destination="JXS-Gn-Fgu" id="mSa-dd-3jE"/>
+                        <outlet property="expireDateField" destination="UAn-9p-B09" id="iZO-wg-SFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wmu-DL-L2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6231.3432835820895" y="-3.432494279176201"/>
+        </scene>
+        <!--Card Exist Controller-->
+        <scene sceneID="ZUM-Tn-xGA">
+            <objects>
+                <viewController storyboardIdentifier="CardExistController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JLX-Rk-PzQ" customClass="CardExistController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4KH-jV-7BM">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JsA-j2-Nzg">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UYA-Lm-JES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JsA-j2-Nzg" firstAttribute="leading" secondItem="UYA-Lm-JES" secondAttribute="leading" id="8hq-yy-tFW"/>
+                            <constraint firstItem="UYA-Lm-JES" firstAttribute="trailing" secondItem="JsA-j2-Nzg" secondAttribute="trailing" id="PTg-w5-cIJ"/>
+                            <constraint firstItem="JsA-j2-Nzg" firstAttribute="top" secondItem="UYA-Lm-JES" secondAttribute="top" id="oxY-lg-mvJ"/>
+                            <constraint firstItem="UYA-Lm-JES" firstAttribute="bottom" secondItem="JsA-j2-Nzg" secondAttribute="bottom" id="xYs-zF-i0v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardsTableView" destination="JsA-j2-Nzg" id="rhf-HD-nH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e36-e6-dTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7091.0447761194027" y="-3.432494279176201"/>
+        </scene>
+        <!--Transfer Controller-->
+        <scene sceneID="uqI-ZN-fWk">
+            <objects>
+                <viewController storyboardIdentifier="TransferController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h4W-9L-da5" customClass="TransferController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJq-HG-bKG">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jHL-ky-86j">
+                                <rect key="frame" x="47" y="312" width="308" height="143"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="receiver card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-mt-IIJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0i-KX-RTP">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="308" height="34.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hV-gK-Gt3">
+                                        <rect key="frame" x="0.0" y="108.66666666666669" width="308" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Transfer">
+                                            <backgroundConfiguration key="background" cornerRadius="15"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="transferButtonTapped:" destination="h4W-9L-da5" eventType="touchUpInside" id="lAe-QF-7i4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card amount: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boF-dZ-PZl">
+                                <rect key="frame" x="47" y="494" width="308" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-7N-fH5" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="47" y="117" width="308" height="168"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="cardAnimation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acA-G9-ZC3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lsM-7N-fH5" firstAttribute="height" secondItem="RJq-HG-bKG" secondAttribute="height" multiplier="0.19222" id="1Jd-dI-ukj"/>
+                            <constraint firstItem="jHL-ky-86j" firstAttribute="centerX" secondItem="acA-G9-ZC3" secondAttribute="centerX" id="5Lz-vR-AHq"/>
+                            <constraint firstItem="boF-dZ-PZl" firstAttribute="top" secondItem="jHL-ky-86j" secondAttribute="bottom" constant="39" id="7x4-nC-1Cv"/>
+                            <constraint firstItem="boF-dZ-PZl" firstAttribute="leading" secondItem="jHL-ky-86j" secondAttribute="leading" id="IGs-LB-etH"/>
+                            <constraint firstItem="lsM-7N-fH5" firstAttribute="centerX" secondItem="acA-G9-ZC3" secondAttribute="centerX" id="Wbv-gU-EWw"/>
+                            <constraint firstItem="lsM-7N-fH5" firstAttribute="width" secondItem="RJq-HG-bKG" secondAttribute="width" multiplier="0.766169" id="YPA-az-cpn"/>
+                            <constraint firstItem="jHL-ky-86j" firstAttribute="top" secondItem="lsM-7N-fH5" secondAttribute="bottom" constant="27" id="b7y-Tk-Ale"/>
+                            <constraint firstItem="boF-dZ-PZl" firstAttribute="trailing" secondItem="jHL-ky-86j" secondAttribute="trailing" id="hq3-4u-ab9"/>
+                            <constraint firstItem="lsM-7N-fH5" firstAttribute="top" secondItem="acA-G9-ZC3" secondAttribute="top" constant="55" id="xC6-MQ-Ln0"/>
+                            <constraint firstItem="jHL-ky-86j" firstAttribute="width" secondItem="RJq-HG-bKG" secondAttribute="width" multiplier="0.766169" id="xpU-Ru-etz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountField" destination="b0i-KX-RTP" id="NP6-K1-W43"/>
+                        <outlet property="cardAmountLabel" destination="boF-dZ-PZl" id="CwO-gc-BCU"/>
+                        <outlet property="cardView" destination="lsM-7N-fH5" id="4GM-Je-MCE"/>
+                        <outlet property="receiveCardField" destination="uaK-mt-IIJ" id="1Y0-6Y-D3t"/>
+                        <outlet property="transferButton" destination="8hV-gK-Gt3" id="xga-GS-X0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xp-Ob-7YG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7904.4776119402977" y="-2.7459954233409607"/>
+        </scene>
+        <!--Profile Controller-->
+        <scene sceneID="Ecj-7M-b18">
+            <objects>
+                <viewController storyboardIdentifier="ProfileController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="thS-1s-37d" customClass="ProfileController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J29-NU-W82">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tUO-WP-DIt">
+                                <rect key="frame" x="60" y="441" width="282" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZN-3N-yco">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="58.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXH-8n-clC">
+                                        <rect key="frame" x="0.0" y="58.666666666666686" width="282" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM4-ng-sTm">
+                                        <rect key="frame" x="0.0" y="117.66666666666664" width="282" height="58.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-uD-xWM">
+                                        <rect key="frame" x="0.0" y="176.33333333333337" width="282" height="58.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LE-uv-zWZ" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="27" y="120" width="348" height="313"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="userProfile"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ADw-rY-EIl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6LE-uv-zWZ" firstAttribute="height" secondItem="J29-NU-W82" secondAttribute="height" multiplier="0.358124" id="G65-k1-x5h"/>
+                            <constraint firstItem="tUO-WP-DIt" firstAttribute="width" secondItem="J29-NU-W82" secondAttribute="width" multiplier="0.701493" id="S18-A3-Bjz"/>
+                            <constraint firstItem="6LE-uv-zWZ" firstAttribute="top" secondItem="ADw-rY-EIl" secondAttribute="top" constant="58" id="XVB-hb-RK5"/>
+                            <constraint firstItem="tUO-WP-DIt" firstAttribute="height" secondItem="J29-NU-W82" secondAttribute="height" multiplier="0.268879" id="Yc6-83-qYl"/>
+                            <constraint firstItem="tUO-WP-DIt" firstAttribute="top" secondItem="6LE-uv-zWZ" secondAttribute="bottom" constant="8" symbolic="YES" id="fYW-Tt-HIv"/>
+                            <constraint firstItem="6LE-uv-zWZ" firstAttribute="width" secondItem="J29-NU-W82" secondAttribute="width" multiplier="0.865672" id="g9u-2q-fbd"/>
+                            <constraint firstItem="6LE-uv-zWZ" firstAttribute="centerX" secondItem="ADw-rY-EIl" secondAttribute="centerX" id="hEi-rp-nrk"/>
+                            <constraint firstItem="tUO-WP-DIt" firstAttribute="centerX" secondItem="6LE-uv-zWZ" secondAttribute="centerX" id="owU-pP-Z3C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileAnimation" destination="6LE-uv-zWZ" id="Jz9-ve-lrR"/>
+                        <outlet property="userEmailLabel" destination="wXH-8n-clC" id="OQm-YC-wMH"/>
+                        <outlet property="userNameLabel" destination="RZN-3N-yco" id="ONq-oG-Wd1"/>
+                        <outlet property="userNumberLabel" destination="UM4-ng-sTm" id="Ol7-aN-6bG"/>
+                        <outlet property="userPasswordLabel" destination="SQr-uD-xWM" id="zXX-aP-ZyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNj-5G-gYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8782.0895522388055" y="-3.432494279176201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
