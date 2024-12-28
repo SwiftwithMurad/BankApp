@@ -47,8 +47,6 @@ class TransferController: UIViewController {
            let index = selectedCardIndex {
             if cards.amount[index] >= enteredValue {
                 cards.amount[index] -= enteredValue
-//                    let currentValue = cardAmount - enteredValue
-//                    cards.amount[i] = currentValue
                 cardAmountLabel.textColor = .black
                 cardAmountLabel.text = "Your current amount is \(cards.amount[index])$"
             } else if enteredValue > cards.amount[index] {
@@ -59,14 +57,3 @@ class TransferController: UIViewController {
     }
     
 }
-
-/*
- 
- cardAmount = 1000
- enteredValue = 200
- currentValue = cardAmount - enteredValue = 1000 - 200 = 800
- 
- currentValue = currentValue - enteredValue = 800 - 100 = 700
- 
- 
- */

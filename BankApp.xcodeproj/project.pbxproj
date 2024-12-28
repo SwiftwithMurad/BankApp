@@ -14,22 +14,9 @@
 		04620DBE2CF77E4300EC8CE5 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		04620DD02CF77E4500EC8CE5 /* Exceptions for "BankApp" folder in "BankApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 04620DBD2CF77E4300EC8CE5 /* BankApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		04620DC02CF77E4300EC8CE5 /* BankApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				04620DD02CF77E4500EC8CE5 /* Exceptions for "BankApp" folder in "BankApp" target */,
-			);
 			path = BankApp;
 			sourceTree = "<group>";
 		};
@@ -47,10 +34,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04620DB52CF77E4300EC8CE5 = {
+		044962082D20628E0061DE44 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 				04620DC02CF77E4300EC8CE5 /* BankApp */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		04620DB52CF77E4300EC8CE5 = {
+			isa = PBXGroup;
+			children = (
+				044962082D20628E0061DE44 /* New Group */,
 				04620DBF2CF77E4300EC8CE5 /* Products */,
 			);
 			sourceTree = "<group>";
